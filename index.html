@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Navigation Bar | CodingNepal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    
+</head>
+<body>
+  <nav class="navbar">
+    <div class="content">
+      <div class="logo">
+        <a href="#">Scooter</a>
+      </div>
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Scooters</a></li>
+        <li><a href="#">Wheels</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="icon menu-btn">
+        <i class="fa fa-arrow-right"></i>
+      </div>
+    </div>
+</nav>
+
+
+<div class="img">
+    <img src="assest/images/scooter.jpg">
+    <h2 >Kick scooter T17</h2>
+
+    <p>kick scooter T17 is developed exclusively for 
+        global shared-scooter service providers
+    </p>
+</div>
+
+    
+
+    <div class="text">
+        <h2>Features</h2>
+        
+    </div>
+
+
+    <div class="txt">
+    <h2>Semi Auto Poliot</h2>
+    <p >This system made you<br>
+    comfortable for driving
+    </p>
+        <h2>Sagway cloud System
+    
+        </h2>
+
+        <p >We are offering those new<br>
+            system in the upcomming days
+            </p>
+
+    <h2>
+        Loe Manintainence
+        const
+    </h2>
+    <p >Our scooter's are low at cost<br>
+    and they are easily available
+    </p>
+     
+       
+</div>
+
+
+
+  <div class="banner">
+
+    
+  </div>
+  <div class="about"></div>
+    <div class="content"></div>
+
+       
+    
+
+
+
+
+
+
+
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    }
+    cancelBtn.onclick = ()=>{
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+
+
+  </body>
+  </html>
+
+
+
+
+
